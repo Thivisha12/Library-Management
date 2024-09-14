@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Sign Up</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff0066, #ff99cc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .tab {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .tab button {
+            flex: 1;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .tab button.active {
+            background: linear-gradient(45deg, #ff0066, #ff99cc);
+            color: white;
+            border-radius: 8px;
+        }
+        .tab button:hover {
+            background: linear-gradient(45deg, #ff3366, #ff80b3);
+            color: white;
+            border-radius: 8px;
+        }
+        .form {
+            display: none;
+        }
+        .form.active {
+            display: block;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 100%;
+            font-size: 16px;
+        }
+        button.submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #ff0066, #ff99cc);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+        button.submit-btn:hover {
+            background: linear-gradient(45deg, #ff3366, #ff6699);
+        }
+        .signup-text {
+            margin-top: 20px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login/Sign Up</h2>
+        <div class="tab">
+            <button id="loginTab" class="active" onclick="toggleForm('login')">Login</button>
+            <button id="signupTab" onclick="toggleForm('signup')">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form active">
+            <form action="/login" method="POST">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button class="submit-btn" type="submit">Login</button>
+            </form>
+            <div class="signup-text">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signupForm" class="form">
+            <form action="/signup" method="POST">
+                <input type="text" id="newUsername" name="newUsername" placeholder="Username" required>
+                <input type="password" id="newPassword" name="newPassword" placeholder="Password" required>
+                <button class="submit-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            var loginForm = document.getElementById('loginForm');
+            var signupForm = document.getElementById('signupForm');
+            var loginTab = document.getElementById('loginTab');
+            var signupTab = document.getElementById('signupTab');
+
+            if (formType === 'login') {
+                loginForm.classList.add('active');
+                signupForm.classList.remove('active');
+                loginTab.classList.add('active');
+                signupTab.classList.remove('active');
+            } else {
+                signupForm.classList.add('active');
+                loginForm.classList.remove('active');
+                signupTab.classList.add('active');
+                loginTab.classList.remove('active');
+            }
+        }
+    </script>
+
+</body>
+</html>

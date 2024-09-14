@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Library Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .dashboard {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .crud-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .crud-actions button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .crud-actions button:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+        .book-list {
+            margin-top: 20px;
+        }
+        .book {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .book:hover {
+            background-color: #e0f7fa;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .book h3 {
+            color: #333;
+            margin: 0;
+        }
+        .book-details {
+            margin-top: 10px;
+        }
+        .book-details p {
+            margin: 5px 0;
+        }
+        .edit-delete-buttons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .edit-delete-buttons button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .edit-delete-buttons button:hover {
+            background-color: #d84315;
+        }
+        .edit-delete-buttons .edit-btn {
+            background-color: #ffb300;
+        }
+        .edit-delete-buttons .edit-btn:hover {
+            background-color: #ff8f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome to the Admin Dashboard</h1>
+        <p>Manage library books with the following operations:</p>
+
+        <!-- CRUD Actions -->
+        <div class="crud-actions">
+            <button onclick="addBook()">Add Book</button>
+            <button onclick="editBook()">Edit Book</button>
+            <button onclick="deleteBook()">Delete Book</button>
+        </div>
+
+        <!-- Book List -->
+        <div class="book-list">
+            <h2>Library Books</h2>
+
+            <div class="book">
+                <h3>The Great Gatsby</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p><strong>Price:</strong> ₹350</p>
+                    <p><strong>Pages:</strong> 180</p>
+                    <p><strong>Available Copies:</strong> 5</p>
+                </div>
+                <div class="edit-delete-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>To Kill a Mockingbird</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> Harper Lee</p>
+                    <p><strong>Price:</strong> ₹400</p>
+                    <p><strong>Pages:</strong> 281</p>
+                    <p><strong>Available Copies:</strong> 3</p>
+                </div>
+                <div class="edit-delete-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>1984 by George Orwell</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> George Orwell</p>
+                    <p><strong>Price:</strong> ₹450</p>
+                    <p><strong>Pages:</strong> 328</p>
+                    <p><strong>Available Copies:</strong> 4</p>
+                </div>
+                <div class="edit-delete-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>Moby Dick</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> Herman Melville</p>
+                    <p><strong>Price:</strong> ₹500</p>
+                    <p><strong>Pages:</strong> 635</p>
+                    <p><strong>Available Copies:</strong> 2</p>
+                </div>
+                <div class="edit-delete-buttons">
+                    <button class="edit-btn">Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addBook() {
+            alert('Functionality to add a book goes here.');
+        }
+
+        function editBook() {
+            alert('Functionality to edit a book goes here.');
+        }
+
+        function deleteBook() {
+            alert('Functionality to delete a book goes here.');
+        }
+    </script>
+</body>
+</html>

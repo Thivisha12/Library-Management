@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Library Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .dashboard {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .book-list {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .book {
+            padding: 15px;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .book:hover {
+            background-color: #b2dfdb; /* Hover background color */
+            transform: scale(1.03); /* Slight zoom effect */
+        }
+        .book h3 {
+            color: #00796b;
+            margin: 0;
+        }
+        .book-details {
+            margin-top: 10px;
+        }
+        .book-details p {
+            margin: 5px 0;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #004d40; /* Hover effect on button */
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome to the Library Management Dashboard</h1>
+        <p>This is the user-only area.</p>
+        
+        <div class="book-list">
+            
+            <h2>Available Books</h2>
+            <div class="book">
+                <h3>The Great Gatsby</h3>
+                
+                <div class="book-details">
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p><strong>Price:</strong> ₹350</p>
+                    <p><strong>Pages:</strong> 180</p>
+                    <p><strong>Available Copies:</strong> 5</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>To Kill a Mockingbird</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> Harper Lee</p>
+                    <p><strong>Price:</strong> ₹400</p>
+                    <p><strong>Pages:</strong> 281</p>
+                    <p><strong>Available Copies:</strong> 3</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>1984 by George Orwell</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> George Orwell</p>
+                    <p><strong>Price:</strong> ₹450</p>
+                    <p><strong>Pages:</strong> 328</p>
+                    <p><strong>Available Copies:</strong> 4</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>Moby Dick</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> Herman Melville</p>
+                    <p><strong>Price:</strong> ₹500</p>
+                    <p><strong>Pages:</strong> 635</p>
+                    <p><strong>Available Copies:</strong> 2</p>
+                </div>
+            </div>
+
+            <div class="book">
+                <h3>War and Peace</h3>
+                <div class="book-details">
+                    <p><strong>Author:</strong> Leo Tolstoy</p>
+                    <p><strong>Price:</strong> ₹600</p>
+                    <p><strong>Pages:</strong> 1225</p>
+                    <p><strong>Available Copies:</strong> 1</p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="location.href='/borrow'">Borrow a Book</button>
+        <button onclick="location.href='/return'">Return a Book</button>
+        <button onclick="location.href='/profile'">View Profile</button>
+    </div>
+</body>
+</html>
